@@ -1,7 +1,7 @@
 <%= form_for :make, url: models_path, method: :get do |f| %>
   <p>
-    <%= f.label :webmotors_make_id, 'Escolha a fabricante:' %>
-    <%= f.collection_select :webmotors_make_id, @makes, :webmotors_id, :name %>
+    <%= f.label :webmotors_id, 'Escolha a fabricante:' %>
+    <%= f.collection_select :webmotors_id, @makes, :webmotors_id, :name %>
   </p>  
 
   <%= f.submit 'Buscar modelos' %>

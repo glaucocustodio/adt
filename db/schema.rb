@@ -20,11 +20,17 @@ ActiveRecord::Schema.define(version: 20160226182941) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "makes", ["webmotors_id"], name: "index_makes_on_webmotors_id"
+
   create_table "models", force: :cascade do |t|
     t.integer  "make_id"
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "webmotors_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
+
+  add_index "models", ["make_id"], name: "index_models_on_make_id"
+  add_index "models", ["webmotors_id"], name: "index_models_on_webmotors_id"
 
 end

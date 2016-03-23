@@ -4,6 +4,6 @@ class ModelsController < ApplicationController
   end
 
   def make_params
-    params.require(:make).permit(:webmotors_make_id)
+    params.require(:make).permit(:webmotors_id)
   end
 end
